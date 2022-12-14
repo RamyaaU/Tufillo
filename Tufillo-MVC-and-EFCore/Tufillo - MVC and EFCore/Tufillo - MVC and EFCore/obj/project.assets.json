@@ -744,11 +744,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\source\\repos\\Tufillo\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\source\\repos\\Tufillo\\Tufillo-MVC-EFCore\\Tufillo-MVC-and-EFCore\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore.csproj",
       "projectName": "Tufillo - MVC and EFCore",
-      "projectPath": "C:\\Users\\admin\\source\\repos\\Tufillo\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore.csproj",
+      "projectPath": "C:\\Users\\admin\\source\\repos\\Tufillo\\Tufillo-MVC-EFCore\\Tufillo-MVC-and-EFCore\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\source\\repos\\Tufillo\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore\\obj\\",
+      "outputPath": "C:\\Users\\admin\\source\\repos\\Tufillo\\Tufillo-MVC-EFCore\\Tufillo-MVC-and-EFCore\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

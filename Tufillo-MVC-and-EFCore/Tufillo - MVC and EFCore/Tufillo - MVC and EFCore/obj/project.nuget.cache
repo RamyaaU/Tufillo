@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TZ+nGrccm7P3EFiW4d/xoix8qwjyYes4FsoKVIWpFIL6N/ZjHB224HcPZoGrNwhHipqP4PNLSyXz9c1+3ucILw==",
+  "dgSpecHash": "F+fKz8ugvt2DojhJwyUSiNSrqtpDhV3CCCx7AWyFXbS0tV2T1LDMZFuN2i32or8ulnwkRuLXTjhh7QBl7HPm1Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\source\\repos\\Tufillo\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore.csproj",
+  "projectFilePath": "C:\\Users\\admin\\source\\repos\\Tufillo\\Tufillo-MVC-EFCore\\Tufillo-MVC-and-EFCore\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore\\Tufillo - MVC and EFCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.31\\microsoft.aspnetcore.mvc.razor.extensions.3.1.31.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\3.1.31\\microsoft.aspnetcore.mvc.razor.runtimecompilation.3.1.31.nupkg.sha512",
