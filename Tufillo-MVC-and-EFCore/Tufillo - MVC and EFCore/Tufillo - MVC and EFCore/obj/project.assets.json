@@ -1943,6 +1943,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Tufillo.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.31"
+        },
+        "compile": {
+          "bin/placeholder/Tufillo.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tufillo.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -6387,12 +6400,18 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Tufillo.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Tufillo.Infrastructure/Tufillo.Infrastructure.csproj",
+      "msbuildProject": "../Tufillo.Infrastructure/Tufillo.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 3.1.31",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.31"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.31",
+      "Tufillo.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6426,7 +6445,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\admin\\source\\repos\\Tufillo\\Tufillo-MVC-EFCore\\Tufillo-MVC-and-EFCore\\Tufillo - MVC and EFCore\\Tufillo.Infrastructure\\Tufillo.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\admin\\source\\repos\\Tufillo\\Tufillo-MVC-EFCore\\Tufillo-MVC-and-EFCore\\Tufillo - MVC and EFCore\\Tufillo.Infrastructure\\Tufillo.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

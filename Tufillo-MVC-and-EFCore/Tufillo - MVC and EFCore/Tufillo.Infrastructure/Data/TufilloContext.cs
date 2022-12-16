@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Tufillo___MVC_and_EFCore.Models;
 
 namespace Tufillo.Infrastructure.Data
 {
@@ -9,7 +10,10 @@ namespace Tufillo.Infrastructure.Data
     {
         public TufilloContext(DbContextOptions<TufilloContext> options) : base(options)
         {
-                
+
         }
+
+        //prop       entity     nameyouwanttogiveittotableindb      
+        public DbSet<Category> Category { get; set; }
     }
 }
