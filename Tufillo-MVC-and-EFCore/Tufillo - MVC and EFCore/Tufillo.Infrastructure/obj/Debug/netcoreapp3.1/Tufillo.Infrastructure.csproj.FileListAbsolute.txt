@@ -1,0 +1,13 @@
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\bin\Debug\netcoreapp3.1\Tufillo.Infrastructure.deps.json
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\bin\Debug\netcoreapp3.1\Tufillo.Infrastructure.runtimeconfig.json
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\bin\Debug\netcoreapp3.1\Tufillo.Infrastructure.runtimeconfig.dev.json
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\bin\Debug\netcoreapp3.1\Tufillo.Infrastructure.dll
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\bin\Debug\netcoreapp3.1\Tufillo.Infrastructure.pdb
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\obj\Debug\netcoreapp3.1\Tufillo.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\obj\Debug\netcoreapp3.1\Tufillo.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\obj\Debug\netcoreapp3.1\Tufillo.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\obj\Debug\netcoreapp3.1\Tufillo.Infrastructure.AssemblyInfo.cs
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\obj\Debug\netcoreapp3.1\Tufillo.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\obj\Debug\netcoreapp3.1\Tufillo.Infrastructure.dll
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\obj\Debug\netcoreapp3.1\Tufillo.Infrastructure.pdb
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo.Infrastructure\obj\Debug\netcoreapp3.1\Tufillo.Infrastructure.genruntimeconfig.cache
