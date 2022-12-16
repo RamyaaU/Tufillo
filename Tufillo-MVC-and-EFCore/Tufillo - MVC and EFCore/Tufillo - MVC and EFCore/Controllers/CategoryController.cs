@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Tufillo.Infrastructure.Data;
-using Tufillo___MVC_and_EFCore.Models;
+using Tufillo.Infrastructure.Models;
 
 namespace Tufillo___MVC_and_EFCore.Controllers
 {
@@ -19,6 +19,12 @@ namespace Tufillo___MVC_and_EFCore.Controllers
         {
             IEnumerable<Category> objects = _dbContext.Category;
             return View(objects);
+        }
+
+        //GET - Create 
+        public IActionResult Create()
+        {
+           return View();
         }
     }
 }

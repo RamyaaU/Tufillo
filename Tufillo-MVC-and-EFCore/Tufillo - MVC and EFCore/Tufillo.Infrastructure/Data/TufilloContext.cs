@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Tufillo___MVC_and_EFCore.Models;
+using Tufillo.Infrastructure.Models;
 
 namespace Tufillo.Infrastructure.Data
 {
