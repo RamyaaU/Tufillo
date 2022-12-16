@@ -1,4 +1,4 @@
-﻿@model Tufillo.Infrastructure.Models.Category;
+﻿@model IEnumerable<Tufillo.Infrastructure.Models.Category>
 
 <div class="container p-3">
     <div class="row pt-4">
@@ -31,8 +31,8 @@
                 @foreach (var obj in Model)
                 {
                     <tr>
-                        <td width="50%">@objects.Name</td>
-                        <td width="30%">@objects.DisplayOrder</td>
+                        <td width="50%">@obj.Name</td>
+                        <td width="30%">@obj.DisplayOrder</td>
                         <td></td>
                     </tr>
                 }

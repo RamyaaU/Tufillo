@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Tufillo___MVC_and_EFCore.Models
+namespace Tufillo.Infrastructure.Models
 {
     public class Category
     {
