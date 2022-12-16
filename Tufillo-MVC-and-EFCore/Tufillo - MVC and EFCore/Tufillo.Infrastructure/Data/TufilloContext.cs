@@ -1,10 +1,15 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Tufillo.Infrastructure.Data
 {
-    public class TufilloContext
+    public class TufilloContext : DbContext
     {
+        public TufilloContext(DbContextOptions<TufilloContext> options) : base(options)
+        {
+                
+        }
     }
 }
