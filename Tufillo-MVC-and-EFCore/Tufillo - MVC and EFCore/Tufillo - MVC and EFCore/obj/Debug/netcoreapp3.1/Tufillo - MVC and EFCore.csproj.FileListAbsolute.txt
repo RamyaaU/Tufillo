@@ -422,3 +422,4 @@ C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tu
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Category\Create.cshtml.g.cs

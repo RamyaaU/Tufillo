@@ -1,7 +1,11 @@
-﻿
-@{
-    ViewData["Title"] = "Create";
-}
+﻿@*whenever user enters any category name and display order, 
+the value must be passed to our action method which will
+be a post action method for category*@
+@model Tufillo.Infrastructure.Models.Category;
 
-<h1>Create</h1>
+<form method="post" asp-action="Create">
+    <div class="border p-3">
+        <h2 class="text-info pl-3">Add Category</h2>
+    </div>
+</form>
 
