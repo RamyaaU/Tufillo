@@ -26,5 +26,14 @@ namespace Tufillo___MVC_and_EFCore.Controllers
         {
            return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateCategory(Category addCategory)
+        {
+            _dbContext.Category.Add(addCategory);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
