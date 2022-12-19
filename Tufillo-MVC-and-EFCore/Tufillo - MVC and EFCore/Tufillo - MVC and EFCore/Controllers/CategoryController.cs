@@ -24,16 +24,23 @@ namespace Tufillo___MVC_and_EFCore.Controllers
         //GET - Create 
         public IActionResult Create()
         {
-           return View();
+            return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateCategory(Category addCategory)
+        public IActionResult Create(Category addCategory)
         {
-            _dbContext.Category.Add(addCategory);
-            _dbContext.SaveChanges();
-            return RedirectToAction("Index");
+            //this method checks if all the rules defined in view is valid,
+            //if it is valid
+            //then it goes inside the method and executes
+            if (ModelState.IsValid)
+            {
+                _dbContext.Category.Add(addCategory);
+                _dbContext.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(addCategory);
         }
     }
 }

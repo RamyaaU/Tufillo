@@ -3,8 +3,10 @@ the value must be passed to our action method which will
 be a post action method for category*@
 @model Tufillo.Infrastructure.Models.Category;
 
-<form method="post" asp-action="CreateCategory">
+<form method="post" asp-action="Create">
     <div class="border p-3">
+        @*for error validation message in ui*@
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <h2 class="text-info pl-2">Add Category</h2>
 
     <div class="row">
@@ -15,6 +17,7 @@ be a post action method for category*@
                 </div>
                 <div class="col-8">
                     <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
 
             </div>
@@ -24,6 +27,7 @@ be a post action method for category*@
                 </div>
                 <div class="col-8">
                     <input asp-for="DisplayOrder" class="form-control" />
+                        <span asp-validation-for="DisplayOrder" class="text-danger"></span>
                 </div>
 
             </div>
