@@ -27,6 +27,11 @@ namespace Tufillo___MVC_and_EFCore.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Add Category
+        /// </summary>
+        /// <param name="addCategory"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category addCategory)
@@ -60,6 +65,27 @@ namespace Tufillo___MVC_and_EFCore.Controllers
                 return NotFound();
             }
             return View(obj);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="addCategory"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Category editCategory)
+        {
+            //this method checks if all the rules defined in view is valid,
+            //if it is valid
+            //then it goes inside the method and executes
+            if (ModelState.IsValid)
+            {
+                _dbContext.Category.Update(editCategory);
+                _dbContext.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(editCategory);
         }
     }
 }
