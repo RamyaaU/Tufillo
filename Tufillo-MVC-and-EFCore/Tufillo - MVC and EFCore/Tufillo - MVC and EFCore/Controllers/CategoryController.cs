@@ -42,5 +42,24 @@ namespace Tufillo___MVC_and_EFCore.Controllers
             }
             return View(addCategory);
         }
+
+
+        //GET - Edit
+        //why id is being passed here because from the ui page, 
+        //we are passing the object as id 
+        public IActionResult Edit(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            
+            var obj = _dbContext.Category.Find(id);
+            if( obj == null)
+            {
+                return NotFound();
+            }
+            return View(obj);
+        }
     }
 }
