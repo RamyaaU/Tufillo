@@ -48,7 +48,6 @@ namespace Tufillo___MVC_and_EFCore.Controllers
             return View(addCategory);
         }
 
-
         //GET - Edit
         //why id is being passed here because from the ui page, 
         //we are passing the object as id 
@@ -58,9 +57,9 @@ namespace Tufillo___MVC_and_EFCore.Controllers
             {
                 return NotFound();
             }
-            
+
             var obj = _dbContext.Category.Find(id);
-            if( obj == null)
+            if (obj == null)
             {
                 return NotFound();
             }
@@ -87,5 +86,39 @@ namespace Tufillo___MVC_and_EFCore.Controllers
             }
             return View(editCategory);
         }
+
+        //GET - Delete
+        //why id is being passed here because from the ui page, 
+        //we are passing the object as id 
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var obj = _dbContext.Category.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            return View(obj);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteCategory(int? id)
+        {
+            var obj = _dbContext.Category.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            _dbContext.Category.Remove(obj);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
+
