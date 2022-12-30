@@ -26,11 +26,95 @@ namespace Tufillo___MVC_and_EFCore.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Add Category
+        /// </summary>
+        /// <param name="addCategory"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(ApplicationType applicationType)
+        public IActionResult Create(ApplicationType addAppType)
         {
-            _dbContext.ApplicationType.Add(applicationType);
+            //this method checks if all the rules defined in view is valid,
+            //if it is valid
+            //then it goes inside the method and executes
+            if (ModelState.IsValid)
+            {
+                _dbContext.ApplicationType.Add(addAppType);
+                _dbContext.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(addAppType);
+        }
+
+        //GET - Edit
+        //why id is being passed here because from the ui page, 
+        //we are passing the object as id 
+        public IActionResult Edit(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var obj = _dbContext.ApplicationType.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            return View(obj);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="addCategory"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditApplicationType(ApplicationType editAppType)
+        {
+            //this method checks if all the rules defined in view is valid,
+            //if it is valid
+            //then it goes inside the method and executes
+            if (ModelState.IsValid)
+            {
+                _dbContext.ApplicationType.Update(editAppType);
+                _dbContext.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(editAppType);
+        }
+
+        //GET - Delete
+        //why id is being passed here because from the ui page, 
+        //we are passing the object as id 
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var obj = _dbContext.ApplicationType.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            return View(obj);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteApplicationType(int? id)
+        {
+            var obj = _dbContext.Category.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            _dbContext.Category.Remove(obj);
             _dbContext.SaveChanges();
             return RedirectToAction("Index");
         }
