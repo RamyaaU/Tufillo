@@ -34,7 +34,7 @@ namespace Tufillo___MVC_and_EFCore.Controllers
 
         //NOTE - UPSERT is a common method for both edit and delete
         //GET method for both update and insert in single view
-        public IActionResult UpSert(int? id)
+        public IActionResult Upsert(int? id)
         {
             Product product = new Product();
             if (id == null)
@@ -53,6 +53,7 @@ namespace Tufillo___MVC_and_EFCore.Controllers
             }
         }
 
+        [HttpPost]
         //POST method for both update and insert in single view
         [ValidateAntiForgeryToken]
         public IActionResult UpSert(Product product)

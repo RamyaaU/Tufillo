@@ -429,3 +429,5 @@ C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tu
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Category\Delete.cshtml.g.cs
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationType\Delete.cshtml.g.cs
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationType\Edit.cshtml.g.cs
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Product\UpSert.cshtml.g.cs
