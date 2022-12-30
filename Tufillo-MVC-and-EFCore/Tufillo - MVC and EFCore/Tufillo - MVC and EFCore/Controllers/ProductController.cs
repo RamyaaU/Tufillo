@@ -16,6 +16,10 @@ namespace Tufillo___MVC_and_EFCore.Controllers
             _dbContext = dbContext;
         }
 
+        /// <summary>
+        /// this method displays all the products in the view
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             IEnumerable<Product> product = _dbContext.Product;
@@ -27,5 +31,34 @@ namespace Tufillo___MVC_and_EFCore.Controllers
 
             return View(product);
         }
+
+        //NOTE - UPSERT is a common method for both edit and delete
+        //GET method for both update and insert in single view
+        public IActionResult UpSert(int? id)
+        {
+            Product product = new Product();
+            if (id == null)
+            {
+                //this is for create
+                return View(product);
+            }
+            else
+            {
+                product = _dbContext.Product.Find(id);
+                if(product == null)
+                {
+                    return NotFound();
+                }
+                return View(product);
+            }
+        }
+
+        //POST method for both update and insert in single view
+        [ValidateAntiForgeryToken]
+        public IActionResult UpSert(Product product)
+        {
+            return View();
+        }
+
     }
 }
