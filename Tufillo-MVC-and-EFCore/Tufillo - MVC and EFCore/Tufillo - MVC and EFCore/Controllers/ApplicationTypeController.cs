@@ -72,7 +72,7 @@ namespace Tufillo___MVC_and_EFCore.Controllers
         /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult EditApplicationType(ApplicationType editAppType)
+        public IActionResult Edit(ApplicationType editAppType)
         {
             //this method checks if all the rules defined in view is valid,
             //if it is valid
@@ -106,15 +106,15 @@ namespace Tufillo___MVC_and_EFCore.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteApplicationType(int? id)
+        public IActionResult DeleteAppType(int? id)
         {
-            var obj = _dbContext.Category.Find(id);
+            var obj = _dbContext.ApplicationType.Find(id);
             if (obj == null)
             {
                 return NotFound();
             }
 
-            _dbContext.Category.Remove(obj);
+            _dbContext.ApplicationType.Remove(obj);
             _dbContext.SaveChanges();
             return RedirectToAction("Index");
         }
