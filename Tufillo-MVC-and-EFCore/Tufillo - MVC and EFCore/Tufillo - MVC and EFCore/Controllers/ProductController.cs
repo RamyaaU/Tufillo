@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,17 @@ namespace Tufillo___MVC_and_EFCore.Controllers
         //GET method for both update and insert in single view
         public IActionResult Upsert(int? id)
         {
+            //this specifically retreives data from category model 
+            IEnumerable<SelectListItem> CategoryDropdown = _dbContext.Category.Select(
+                i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                });
+
+            //passing the data to view
+            ViewBag.CategoryDropdown = CategoryDropdown;
+
             Product product = new Product();
             if (id == null)
             {
