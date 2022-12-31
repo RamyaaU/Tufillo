@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Tufillo.Infrastructure.Data;
 using Tufillo.Infrastructure.Models;
+using Tufillo___MVC_and_EFCore.Models.ViewModels;
 
 namespace Tufillo___MVC_and_EFCore.Controllers
 {
@@ -25,7 +26,7 @@ namespace Tufillo___MVC_and_EFCore.Controllers
         {
             IEnumerable<Product> product = _dbContext.Product;
 
-            foreach ( var obj in product )
+            foreach (var obj in product)
             {
                 obj.Category = _dbContext.Category.FirstOrDefault(x => x.Id == obj.CategoryId);
             }
@@ -37,21 +38,32 @@ namespace Tufillo___MVC_and_EFCore.Controllers
         //GET method for both update and insert in single view
         public IActionResult Upsert(int? id)
         {
-            //this specifically retreives data from category model 
-            IEnumerable<SelectListItem> CategoryDropdown = _dbContext.Category.Select(
+            ////this specifically retreives data from category model 
+            //IEnumerable<SelectListItem> CategoryDropdown = _dbContext.Category.Select(
+            //    i => new SelectListItem
+            //    {
+            //        Text = i.Name,
+            //        Value = i.Id.ToString()
+            //    });
+
+            ////passing the data to view
+            ////ViewBag.CategoryDropdown = CategoryDropdown;
+
+            ////passing the same data through viewdata
+            //ViewData["CategoryDropdown"] = CategoryDropdown;
+
+            //instantiate viewmodel and call the items in viewmodel
+            ProductViewModel product = new ProductViewModel()
+            {
+                Product = new Product(),
+                CategorySelectList = _dbContext.Category.Select(
                 i => new SelectListItem
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()
-                });
+                })
+            };
 
-            //passing the data to view
-            //ViewBag.CategoryDropdown = CategoryDropdown;
-
-            //passing the same data through viewdata
-            ViewData ["CategoryDropdown"] = CategoryDropdown;
-
-            Product product = new Product();
             if (id == null)
             {
                 //this is for create
@@ -59,8 +71,8 @@ namespace Tufillo___MVC_and_EFCore.Controllers
             }
             else
             {
-                product = _dbContext.Product.Find(id);
-                if(product == null)
+                product.Product = _dbContext.Product.Find(id);
+                if (product.Product == null)
                 {
                     return NotFound();
                 }

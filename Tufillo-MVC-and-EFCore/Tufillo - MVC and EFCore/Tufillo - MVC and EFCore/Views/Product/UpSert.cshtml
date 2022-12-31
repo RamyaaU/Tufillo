@@ -1,7 +1,7 @@
 ﻿@*whenever user enters any category name and display order,
 the value must be passed to our action method which will
-be a post action method for category*@
-@model Tufillo.Infrastructure.Models.Product;
+be a post action method for product*@
+@model Tufillo___MVC_and_EFCore.Models.ViewModels.ProductViewModel;
 
 @*
 dynamically creation of the variable*@
@@ -10,10 +10,10 @@ dynamically creation of the variable*@
 }
 
 <form method="post" enctype="multipart/form-data">
-    @if (Model.Id != 0)
+    @if (Model.Product.Id != 0)
     {
         title = "Edit Product";
-        <input asp-for="Id" hidden />
+        <input asp-for="Product.Id" hidden />
     }
     <div class="border p-3">
         @*for error validation message in ui*@
@@ -25,32 +25,32 @@ dynamically creation of the variable*@
             <div class="col-8">
                 <div class="form-group row">
                     <div class="col-4">
-                        <label asp-for="Name"></label>
+                        <label asp-for="Product.Name"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Name" class="form-control" />
-                        <span asp-validation-for="Name" class="text-danger"></span>
+                        <input asp-for="Product.Name" class="form-control" />
+                        <span asp-validation-for="Product.Name" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-4">
-                        <label asp-for="Description"></label>
+                        <label asp-for="Product.Description"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Description" class="form-control" />
+                        <input asp-for="Product.Description" class="form-control" />
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-4">
-                        <label asp-for="Price"></label>
+                        <label asp-for="Product.Price"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Price" class="form-control" />
+                        <input asp-for="Product.Price" class="form-control" />
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-4">
-                        <label asp-for="Image"></label>
+                        <label asp-for="Product.Image"></label>
                     </div>
                     <div class="col-8">
                         <input type="file" name="files" id="uploadBox" multiple class="form-control" />
@@ -58,22 +58,23 @@ dynamically creation of the variable*@
                 </div>
                 <div class="form-group row">
                     <div class="col-4">
-                        <label asp-for="CategoryId"></label>
+                        <label asp-for="Product.CategoryId"></label>
                     </div>
                     <div class="col-8">
                         @*passing as viewbag*@
                         @*<select asp-for="CategoryId" asp-items="@ViewBag.CategoryDropdown" class="form-control">*@
                         @*passing as viewdata*@
-                        <select asp-for="CategoryId" asp-items="@ViewData["CategoryDropdown"] as IEnumerable<SelectListItem>" class="form-control">
+                        @*<select asp-for="Product.CategoryId" asp-items="@ViewData["CategoryDropdown"] as IEnumerable<SelectListItem>" class="form-control">*@
+                        <select asp-for="Product.CategoryId" asp-items="@Model.CategorySelectList" class="form-control">
                             <option selected>--Select Category--</option>
                         </select>
-                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                        <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-8 offset-4 row">
                         <div class="col">
-                            @if (Model.Id != 0)
+                            @if (Model.Product.Id != 0)
                             {
                                 @* //update*@
                                 <input type="submit" class="btn btn-info w-100" value="Update" />
