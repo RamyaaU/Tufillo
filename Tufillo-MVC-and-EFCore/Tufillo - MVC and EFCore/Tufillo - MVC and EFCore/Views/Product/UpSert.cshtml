@@ -61,8 +61,11 @@ dynamically creation of the variable*@
                         <label asp-for="CategoryId"></label>
                     </div>
                     <div class="col-8">
-                        <select asp-for="CategoryId" asp-items="@ViewBag.CategoryDropdown" class="form-control">
-                        <option selected>--Select Category--</option>
+                        @*passing as viewbag*@
+                        @*<select asp-for="CategoryId" asp-items="@ViewBag.CategoryDropdown" class="form-control">*@
+                        @*passing as viewdata*@
+                        <select asp-for="CategoryId" asp-items="@ViewData["CategoryDropdown"] as IEnumerable<SelectListItem>" class="form-control">
+                            <option selected>--Select Category--</option>
                         </select>
                         <span asp-validation-for="CategoryId" class="text-danger"></span>
                     </div>
@@ -80,18 +83,18 @@ dynamically creation of the variable*@
                                 @* //create*@
                                 <input type="submit" onclick="return validateInput()" class="btn btn-primary w-100" value="Update" />
                             }
-                            </div>
-                            <div class="col">
-                                <a asp-action="Index" class="btn btn-success w-100"> <i class="fa-solid fa-right-from-bracket"></i>Back </a>
-                            </div>
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-success w-100"> <i class="fa-solid fa-right-from-bracket"></i>Back </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                @* Keep this empty *@
-            </div>
         </div>
+        <div class="col-4">
+            @* Keep this empty *@
+        </div>
+    </div>
 </form>
 
 

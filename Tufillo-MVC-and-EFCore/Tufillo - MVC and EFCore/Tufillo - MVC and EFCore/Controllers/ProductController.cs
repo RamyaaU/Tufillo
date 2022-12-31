@@ -46,7 +46,10 @@ namespace Tufillo___MVC_and_EFCore.Controllers
                 });
 
             //passing the data to view
-            ViewBag.CategoryDropdown = CategoryDropdown;
+            //ViewBag.CategoryDropdown = CategoryDropdown;
+
+            //passing the same data through viewdata
+            ViewData ["CategoryDropdown"] = CategoryDropdown;
 
             Product product = new Product();
             if (id == null)
