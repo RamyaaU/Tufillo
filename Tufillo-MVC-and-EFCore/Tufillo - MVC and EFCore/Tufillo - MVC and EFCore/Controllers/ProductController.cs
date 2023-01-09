@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using Tufillo.Infrastructure.Constants;
 using Tufillo.Infrastructure.Data;
 using Tufillo.Infrastructure.Models;
 using Tufillo___MVC_and_EFCore.Models.ViewModels;
@@ -12,10 +16,12 @@ namespace Tufillo___MVC_and_EFCore.Controllers
     public class ProductController : Controller
     {
         private readonly TufilloContext _dbContext;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProductController(TufilloContext dbContext)
+        public ProductController(TufilloContext dbContext, IWebHostEnvironment webHostEnvironment)
         {
             _dbContext = dbContext;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         /// <summary>
@@ -83,8 +89,38 @@ namespace Tufillo___MVC_and_EFCore.Controllers
         [HttpPost]
         //POST method for both update and insert in single view
         [ValidateAntiForgeryToken]
-        public IActionResult UpSert(Product product)
+        public IActionResult UpSert(ProductViewModel productViewModel)
         {
+            if(ModelState.IsValid)
+            {
+                var files = HttpContext.Request.Form.Files;
+                string webRootPath = _webHostEnvironment.WebRootPath;
+
+                if(productViewModel.Product.Id == 0)
+                {
+                    //create
+                    string uploadPath = webRootPath + ImageConstant.ImagePath;
+                    string fileName = Guid.NewGuid().ToString();
+                    string fileExtension = Path.GetExtension(files[0].FileName);
+
+
+                    using (var fileStream = new FileStream(Path.Combine(uploadPath, fileName + fileExtension), FileMode.Create))
+                    {
+                        files[0].CopyTo(fileStream);
+                    }
+
+                    productViewModel.Product.Image = fileName + fileExtension;
+
+                    _dbContext.Product.Add(productViewModel.Product);
+                }
+                else
+                {
+                    //update
+                }
+
+                _dbContext.SaveChanges();
+                return RedirectToAction("Index");
+            }
             return View();
         }
 
