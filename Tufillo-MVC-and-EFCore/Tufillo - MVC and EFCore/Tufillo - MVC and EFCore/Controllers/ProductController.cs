@@ -93,12 +93,12 @@ namespace Tufillo___MVC_and_EFCore.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult UpSert(ProductViewModel productViewModel)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var files = HttpContext.Request.Form.Files;
                 string webRootPath = _webHostEnvironment.WebRootPath;
 
-                if(productViewModel.Product.Id == 0)
+                if (productViewModel.Product.Id == 0)
                 {
                     //create
                     //string uploadPath = webRootPath + Image.ImagePath;
@@ -124,7 +124,7 @@ namespace Tufillo___MVC_and_EFCore.Controllers
                     //so to fix this - AsNoTrackingmethod is used
                     var objFromDb = _dbContext.Product.AsNoTracking().FirstOrDefault(u => u.Id == productViewModel.Product.Id);
 
-                    if(files.Count > 0)
+                    if (files.Count > 0)
                     {
                         string uploadPath = webRootPath + ImageConstant.ImagePath;
                         string fileName = Guid.NewGuid().ToString();
@@ -133,7 +133,7 @@ namespace Tufillo___MVC_and_EFCore.Controllers
                         //checks the oldimage
                         var oldImage = Path.Combine(uploadPath, objFromDb.Image);
                         //if oldimage present deletes teh oldimage
-                        if(System.IO.File.Exists(oldImage))
+                        if (System.IO.File.Exists(oldImage))
                         {
                             System.IO.File.Delete(oldImage);
                         }
@@ -158,7 +158,13 @@ namespace Tufillo___MVC_and_EFCore.Controllers
                 _dbContext.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View();
+            productViewModel.CategorySelectList = _dbContext.Category.Select(
+                i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                });
+            return View(productViewModel);
         }
 
     }
