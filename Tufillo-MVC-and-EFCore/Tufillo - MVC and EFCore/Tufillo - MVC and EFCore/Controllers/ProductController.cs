@@ -6,10 +6,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Tufillo.Infrastructure.Constants;
 using Tufillo.Infrastructure.Data;
+using Tufillo___MVC_and_EFCore;
 using Tufillo.Infrastructure.Models;
 using Tufillo___MVC_and_EFCore.Models.ViewModels;
+using Tufillo.Infrastructure.Constants;
 
 namespace Tufillo___MVC_and_EFCore.Controllers
 {
@@ -99,10 +100,10 @@ namespace Tufillo___MVC_and_EFCore.Controllers
                 if(productViewModel.Product.Id == 0)
                 {
                     //create
+                    //string uploadPath = webRootPath + Image.ImagePath;
                     string uploadPath = webRootPath + ImageConstant.ImagePath;
                     string fileName = Guid.NewGuid().ToString();
                     string fileExtension = Path.GetExtension(files[0].FileName);
-
 
                     using (var fileStream = new FileStream(Path.Combine(uploadPath, fileName + fileExtension), FileMode.Create))
                     {

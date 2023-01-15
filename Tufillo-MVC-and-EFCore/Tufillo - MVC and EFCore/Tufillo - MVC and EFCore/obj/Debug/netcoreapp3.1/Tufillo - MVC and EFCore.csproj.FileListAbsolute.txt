@@ -408,11 +408,17 @@ C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tu
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Tufillo - MVC and EFCore.TagHelpers.output.cache
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Tufillo - MVC and EFCore.RazorCoreGenerate.cache
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationType\Create.cshtml.g.cs
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationType\Delete.cshtml.g.cs
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationType\Edit.cshtml.g.cs
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationType\Index.cshtml.g.cs
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Category\Create.cshtml.g.cs
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Category\Delete.cshtml.g.cs
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Product\UpSert.cshtml.g.cs
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -425,9 +431,3 @@ C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tu
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Tufillo - MVC and EFCore.dll
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Tufillo - MVC and EFCore.pdb
 C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Tufillo - MVC and EFCore.genruntimeconfig.cache
-C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs
-C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Category\Delete.cshtml.g.cs
-C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationType\Delete.cshtml.g.cs
-C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationType\Edit.cshtml.g.cs
-C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
-C:\Users\admin\source\repos\Tufillo\Tufillo-MVC-EFCore\Tufillo-MVC-and-EFCore\Tufillo - MVC and EFCore\Tufillo - MVC and EFCore\obj\Debug\netcoreapp3.1\Razor\Views\Product\UpSert.cshtml.g.cs
