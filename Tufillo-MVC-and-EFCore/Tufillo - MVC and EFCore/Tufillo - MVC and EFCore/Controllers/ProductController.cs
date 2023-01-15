@@ -11,6 +11,7 @@ using Tufillo___MVC_and_EFCore;
 using Tufillo.Infrastructure.Models;
 using Tufillo___MVC_and_EFCore.Models.ViewModels;
 using Tufillo.Infrastructure.Constants;
+using Microsoft.EntityFrameworkCore;
 
 namespace Tufillo___MVC_and_EFCore.Controllers
 {
@@ -117,6 +118,41 @@ namespace Tufillo___MVC_and_EFCore.Controllers
                 else
                 {
                     //update
+                    //one issue faced here is EFCore is
+                    //the same product will be updated and retrieved
+                    //as both of them has same keys
+                    //so to fix this - AsNoTrackingmethod is used
+                    var objFromDb = _dbContext.Product.AsNoTracking().FirstOrDefault(u => u.Id == productViewModel.Product.Id);
+
+                    if(files.Count > 0)
+                    {
+                        string uploadPath = webRootPath + ImageConstant.ImagePath;
+                        string fileName = Guid.NewGuid().ToString();
+                        string fileExtension = Path.GetExtension(files[0].FileName);
+
+                        //checks the oldimage
+                        var oldImage = Path.Combine(uploadPath, objFromDb.Image);
+                        //if oldimage present deletes teh oldimage
+                        if(System.IO.File.Exists(oldImage))
+                        {
+                            System.IO.File.Delete(oldImage);
+                        }
+
+                        //updates with new image
+                        using (var fileStream = new FileStream(Path.Combine(uploadPath, fileName + fileExtension), FileMode.Create))
+                        {
+                            files[0].CopyTo(fileStream);
+                        }
+
+                        productViewModel.Product.Image = fileName + fileExtension;
+                    }
+                    else
+                    {
+                        //if the image is not updated, but other info is updated then
+                        //then the old image will be saved unmodified.
+                        productViewModel.Product.Image = objFromDb.Image;
+                    }
+                    _dbContext.Update(productViewModel.Product);
                 }
 
                 _dbContext.SaveChanges();
