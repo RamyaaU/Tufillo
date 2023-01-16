@@ -167,5 +167,21 @@ namespace Tufillo___MVC_and_EFCore.Controllers
             return View(productViewModel);
         }
 
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            Product product = _dbContext.Product.Include(u => u.Category).FirstOrDefault(u => u.Id == id);
+            product.Category = _dbContext.Category.Find(product.CategoryId);
+            if(product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product);
+        }
     }
 }
