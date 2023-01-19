@@ -167,6 +167,12 @@ namespace Tufillo___MVC_and_EFCore.Controllers
             return View(productViewModel);
         }
 
+        //GET - DELETE
+        /// <summary>
+        /// Get method of Delete
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
@@ -175,13 +181,43 @@ namespace Tufillo___MVC_and_EFCore.Controllers
             }
 
             Product product = _dbContext.Product.Include(u => u.Category).FirstOrDefault(u => u.Id == id);
-            product.Category = _dbContext.Category.Find(product.CategoryId);
-            if(product == null)
+            //Product product = _dbContext.Product.Include(u => u.Category).Include(u => u.ApplicationType).FirstOrDefault(u => u.Id == id);
+            //product.Category = _db.Category.Find(product.CategoryId);
+            if (product == null)
             {
                 return NotFound();
             }
 
             return View(product);
+        }
+
+        /// <summary>
+        /// Post Method of Delete
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePost(int? id)
+        {
+            var obj = _dbContext.Product.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            string upload = _webHostEnvironment.WebRootPath + ImageConstant.ImagePath;
+            var oldFile = Path.Combine(upload, obj.Image);
+
+            if (System.IO.File.Exists(oldFile))
+            {
+                System.IO.File.Delete(oldFile);
+            }
+
+
+            _dbContext.Product.Remove(obj);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
