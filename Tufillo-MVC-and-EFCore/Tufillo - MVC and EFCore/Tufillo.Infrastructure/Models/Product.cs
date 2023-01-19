@@ -30,5 +30,12 @@ namespace Tufillo.Infrastructure.Models
         //FK data column 
         [Display(Name="Category Type")]
         public int CategoryId { get; set; }
+
+        [ForeignKey("ApplicationTypeId")]
+        public virtual ApplicationType ApplicationType { get; set; }
+
+        //FK data column 
+        [Display(Name = "Application Type")]
+        public int ApplicationId { get; set; }
     }
 }
